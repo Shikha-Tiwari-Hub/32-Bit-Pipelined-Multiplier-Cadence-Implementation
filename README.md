@@ -1,5 +1,6 @@
 # 32-Bit-Pipelined-Multiplier-Cadence-Implementation
 
+## 📌 Project Overview
 4-Input 32-bit Unsigned Pipelined Multiplier\
 This project implements a high-speed, hardware-efficient 4-input 32-bit unsigned multiplier using a pipelined architecture in Verilog. The design supports continuous data input and computes the final product of four unsigned 32-bit operands across multiple clock cycles. This multiplier is ideal for throughput-critical applications such as DSP and embedded processing.
 
@@ -45,3 +46,37 @@ If all inputs are set to 2, the computation proceeds as follows:​
 **Stage 3:** Compute 4 × 4 = 16, storing 16 in final_result.​
 
 After three clock cycles, the output final_result will hold the value 16.
+
+# 🔁 Design Flow
+1. Design Specification and RTL Coding
+2. Design Simulation Using the **Xcelium**
+3. The Synthesis Flow with DFT Using **Genus**
+4. The Test Stage
+- Running the basic ATPG Flow in **modus** Test
+5. The Equivalency Checking Stage
+6. The Implementation Stage / Physical Design
+7. Gate-Level Simulation
+8. Timing Analysis and Debug Using **Tempus**
+
+# 📁 Directory Structure
+
+# 🧠 Learning Outcomes
+- Practical understanding of pipelined datapath design
+- Hands-on experience with Cadence RTL-to-GDSII flow
+- Timing optimization through pipeline balancing
+
+
+# 📊 Results
+- Achieved timing closure at target clock frequency
+- Improved throughput due to pipelining
+- Clean post-route timing reports
+
+# Acknowledgements
+This project was carried out using **Cadence Tools** as part of academic learning and research work at
+**Vivekananda Instutute of Professional Studies- Technical Campus**, **Department of Electronics Engineering (VLSI & Design Technology)**.
+Special thanks to **Cadence Academic Network** for providing tool access and support.
+
+# License
+This project is licensed under the MIT License[https://mit-license.org/]
+ © 2025 **Shikha Tiwari, Vivekananda Instutute of Professional Studies- Technical Campus** .
+Developed using **Cadence EDA tools** for educational and research purposes.
