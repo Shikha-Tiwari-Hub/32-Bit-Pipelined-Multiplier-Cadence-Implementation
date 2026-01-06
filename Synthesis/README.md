@@ -11,3 +11,17 @@
 ## View the Schematic in the GUI
 <img width="600" height="500" alt="Screenshot 2025-12-06 013531" src="https://github.com/user-attachments/assets/157c2f68-db08-42b7-9e52-af5ea2fcecee" />
 
+# The Test Stage
+**1. Invoking the Modus Test**
+```bash
+cd Synthesis/test_scripts
+```
+**2. Building the Model**\
+**3. Building the Test Mode**\
+**4. Verifying Test Structures**\
+**5. Reporting the TestStructures**\
+**6. Building the Fault Model**\
+**7. Creating the scan Test**\
+**8. Creating the Logic Test**\
+**9. Writing Out the Vectors**\
+**10. exit**
