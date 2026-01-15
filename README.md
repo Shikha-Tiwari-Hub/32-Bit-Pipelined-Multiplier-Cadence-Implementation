@@ -55,8 +55,6 @@ After three clock cycles, the output final_result will hold the value 16.
 - Running the basic ATPG Flow in **modus** Test
 5. The Equivalency Checking Stage
 6. The Implementation Stage / Physical Design
-7. Gate-Level Simulation
-8. Timing Analysis and Debug Using **Tempus**
 
 # 📁 Directory Structure
 
