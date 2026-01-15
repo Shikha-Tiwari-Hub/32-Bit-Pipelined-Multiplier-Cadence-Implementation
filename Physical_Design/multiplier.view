@@ -1,0 +1,48 @@
+
+set init_mmmc_version 2
+# Library sets
+create_library_set -name max_timing \
+    -timing {../lib/slow.lib}
+
+create_library_set -name min_timing \
+    -timing {../lib/fast.lib}
+
+# Timing conditions
+create_timing_condition -name default_mapping_tc_1 \
+    -library_sets {max_timing}
+
+create_timing_condition -name default_mapping_tc_2 \
+    -library_sets {min_timing}
+
+# RC corner
+create_rc_corner -name rccorners \
+    -cap_table ../lib/t018s6mlv.capTbl \
+    -qrc_tech ../lib/t018s6mm.tch
+
+
+# Delay corners
+create_delay_corner -name max_delay \
+    -timing_condition default_mapping_tc_1 \
+    -rc_corner rccorners
+
+create_delay_corner -name min_delay \
+    -timing_condition default_mapping_tc_2 \
+    -rc_corner rccorners
+
+# Constraint mode
+create_constraint_mode -name sdc_cons \
+    -sdc_files ../synth/outputs/Pipelined_mul__sdc.sdc
+
+
+# Analysis views
+create_analysis_view -name wc \
+    -constraint_mode sdc_cons \
+    -delay_corner max_delay
+
+create_analysis_view -name bc \
+    -constraint_mode sdc_cons \
+    -delay_corner min_delay
+
+# Set views
+set_analysis_view -setup wc -hold bc
+
